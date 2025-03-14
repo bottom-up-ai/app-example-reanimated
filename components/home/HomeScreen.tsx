@@ -76,8 +76,7 @@ const HomeScreen = () => {
 					{ velocity: event.velocityX, damping: 50, stiffness: 50 }, 
 					() => {
 						runOnJS(goToNextDay)();
-						/* on remet les écrans en place, avant que l'état soit terminé, ce qui provoque un décalage */
-						// translateX.value = 0;
+						translateX.value = 0;
 					}
 				);
 			} else if (event.velocityX > 500 || event.translationX > SWIPE_THRESHOLD) {
@@ -87,7 +86,7 @@ const HomeScreen = () => {
 					{ velocity: event.velocityX, damping: 50, stiffness: 50 }, 
 					() => {
 						runOnJS(goToPreviousDay)();
-						// translateX.value = 0;
+						translateX.value = 0;
 					}
 				);
 			} else {
